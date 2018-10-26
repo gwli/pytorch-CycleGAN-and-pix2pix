@@ -8,7 +8,7 @@ tag=nvdevtools/pytorch:0.2.0-cuda-8.0
 #     $tag /bin/bash
 
 nvidia-docker run --privileged=true  -e DISPLAY  --net=host --ipc=host -it --rm  -p 7022:22 -p 5022:5022 \
-     -v $HOME/.Xautority:/home/nvidia/.Xautoority \
+     -v $HOME/.Xauthority:/home/nvidia/.Xauthority \
      -v `pwd`/..:/raid/dl_samples \
      -v /raid/tools:/raid/tools \
      -w /raid/dl_samples  \
